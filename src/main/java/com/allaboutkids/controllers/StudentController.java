@@ -24,6 +24,11 @@ public class StudentController {
 
     @GetMapping("")
     public List<Student> getAllStudents(){
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         return studentService.getAllStudents();
     }
 

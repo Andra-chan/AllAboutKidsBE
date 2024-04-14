@@ -3,8 +3,6 @@ package com.allaboutkids.entities;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Time;
-import java.util.Date;
 
 @Entity
 @Data
@@ -126,6 +124,21 @@ public class Student {
 
     public void setTimeOfClass(String timeOfClass) {
         this.timeOfClass = timeOfClass;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", teacher='" + teacher + '\'' +
+                ", course='" + course + '\'' +
+                ", dayOfClass='" + dayOfClass + '\'' +
+                ", timeOfClass='" + timeOfClass + '\'' +
+                ", parent=" + parent +
+                '}';
     }
 
     // getters and setters

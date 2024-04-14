@@ -39,7 +39,7 @@ public class ParentController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Parent> updateParent(@PathVariable Long id,@RequestBody Parent parentDetails){
-        return parentService.upateParent(id, parentDetails);
+        return parentService.updateParent(id, parentDetails);
     }
 
     @GetMapping("/cnp/{cnp}")

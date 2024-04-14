@@ -16,7 +16,7 @@ public class Payment {
     private Long id;
 
     @Column(name = "price", nullable = false)
-    private String price;
+    private Integer price;
 
     @Column(name = "month", nullable = false)
     private String month;
@@ -32,7 +32,7 @@ public class Payment {
     private Parent parent;
 
 
-    public Payment(Long id, String price, String month, String year, String description, Parent parent) {
+    public Payment(Long id, Integer price, String month, String year, String description, Parent parent) {
         this.id = id;
         this.price = price;
         this.month = month;
@@ -53,11 +53,11 @@ public class Payment {
         this.id = id;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

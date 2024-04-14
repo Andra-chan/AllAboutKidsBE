@@ -33,6 +33,7 @@ public class PaymentService {
         return ResponseEntity.ok(payment);
     }
 
+
     public ResponseEntity<HttpStatus> deletePayment(Long id) {
         Payment payment = paymentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No payment exists with id: " + id));
         paymentRepository.delete(payment);

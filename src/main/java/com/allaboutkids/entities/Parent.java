@@ -90,5 +90,17 @@ public class Parent {
         this.cnp = cnp;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", cnp='" + cnp + '\'' +
+                '}';
+    }
+
     // getters and setters
 }

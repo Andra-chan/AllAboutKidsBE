@@ -14,4 +14,7 @@ public interface PaymentRepository extends JpaRepository<Payment, Long> {
     @Query("SELECT payment FROM Payment payment WHERE payment.description LIKE :description%")
     List<Payment> findByQuery(@Param("description")String description);
 
+    @Query("SELECT payment FROM Payment payment WHERE payment.parent.cnp LIKE :cnp%")
+    Payment findByCnp(@Param("cnp")String cnp);
+
 }

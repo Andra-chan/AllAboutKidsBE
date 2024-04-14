@@ -46,7 +46,7 @@ public class ParentService {
         return sortedParents;
     }
 
-    public ResponseEntity<Parent> upateParent(long id, Parent parentDetails) {
+    public ResponseEntity<Parent> updateParent(long id, Parent parentDetails) {
         Parent updateParent = parentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No parent exists with id: " + id));
         updateParent.setFirstName(parentDetails.getFirstName());
         updateParent.setLastName(parentDetails.getLastName());
